@@ -24,3 +24,33 @@ If Docker is already installed, you can skip this step. Otherwise follow these c
 Now verify if docker is installed sucessfully using following command
 <pre><code>sudo docker --version</code></pre>
 You will see output similar to the following image if docker is installed correctly.
+
+<p align="center">
+   <img src="Images/dockerexample.png">
+</p>
+
+## Step 2: Enable Docker Service
+<pre><code>sudo systemctl start docker
+sudo systemctl enable docker</code></pre>
+
+## Step 3: Pull Docker Mirroring
+<pre><code>sudo docker pull privasea/acceleration-node-beta</code></pre>
+
+## Step 4: Creating Directory
+First switch to root user (For most, root is automatically selected). 
+<pre><code>sudo su</code></pre>
+Enter your machine password to confirm.
+
+<p align="center">
+   <img src="Images/superuser.png">
+</p>
+
+Now let's create a directory for running the node program.
+<pre><code>mkdir -p  /privasea/config && cd  /privasea</code></pre>
+
+## Step 4: Creating Keystore File
+Execute the following command to generate a new Keystore file.
+<pre><code>sudo docker run -it -v "/privasea/config:/app/config"  \
+privasea/acceleration-node-beta:latest ./node-calc new_keystore</code></pre>
+### It will ask you to enter a password. Password won't show. So just make sure you put same passowrd to cofirm it.
+### Remember this password. You will need this password later.
