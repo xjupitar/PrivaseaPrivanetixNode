@@ -57,7 +57,7 @@ Now let's create a directory for running the node program.
 Execute the following command to generate a new Keystore file.
 <pre><code>sudo docker run -it -v "/privasea/config:/app/config"  \
 privasea/acceleration-node-beta:latest ./node-calc new_keystore</code></pre>
-### It will ask you to enter a password. Password won't show. So just make sure you put same passowrd to cofirm it.
+__It will ask you to enter a password.__ Password won't show. So just make sure you put same passowrd to cofirm it.
 ### Remember this password. You will need this password later.
 
 
@@ -78,8 +78,9 @@ Now replace 'UTC--2025-01-06T06-11-07.485797065Z--f07c3ef23ae7beb8cd8ba5ff546e35
 
 
 ## Step 7: Run the edited commands.
+First change the directory
 <pre><code>cd /privasea/config</code></pre>
-### Now send the Keystore command that you have edited in previous step.
+__Now send the Keystore command that you have edited in previous step.__
 Check if the file edited correctly using
 <pre><code>ls</code></pre>
 Check if your output is same as below screenshot
